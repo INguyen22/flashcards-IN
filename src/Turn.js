@@ -11,17 +11,16 @@ class Turn {
     this.card
   }
   evaluateGuess() {
-    if (this.guess !== this.card.correctAnswer) {
-      return false
+    if (this.guess === this.card.correctAnswer) {
+      return true
     }
+      return false
   }
   giveFeedback() {
-    if (this.evaluateGuess() === false) {
-      return 'incorrect!'
-    }
-    else {
+    if (this.evaluateGuess()) {
       return 'correct!'
     }
+      return 'incorrect!'
   }
 }
 
