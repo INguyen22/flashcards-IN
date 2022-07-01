@@ -170,18 +170,9 @@ describe('Round', function() {
   it('should start the timer', function() {
     round = new Round(deck)
 
-    round.startTimer()
+    round.timer()
 
     expect(round.seconds).to.equal(1)
     expect(round.minutes).to.equal(0)
-  })
-
-  it.skip('should change seconds to minutes', function() {
-    round = new Round(deck)
-
-    round.timer()
-
-    expect(game.seconds).to.equal(0)
-    expect(game.minutes).to.equal(1)
   })
 })
