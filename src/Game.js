@@ -5,10 +5,13 @@ const Card = require('../src/Card')
 const Deck = require('../src/Deck')
 const Turn = require('../src/Turn')
 const Round = require('../src/Round')
+// let interval;
 
 class Game {
   constructor() {
     this.cardsInPlay = []
+    // this.seconds = 0
+    // this.minutes = 0
   }
 
   printMessage(deck) {
@@ -26,6 +29,7 @@ class Game {
     this.createRound()
     this.printMessage(this.newDeck)
     this.printQuestion(this.currentRound)
+    this.currentRound.startTimer()
   }
   createCards() {
     prototypeQuestions.forEach(prototypeQuestion => {
