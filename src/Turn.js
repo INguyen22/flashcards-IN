@@ -5,10 +5,10 @@ class Turn {
     this.card = card
   }
   returnGuess() {
-    this.guess
+    return this.guess
   }
   returnCard() {
-    this.card
+    return this.card
   }
   evaluateGuess() {
     if (this.guess === this.card.correctAnswer) {
