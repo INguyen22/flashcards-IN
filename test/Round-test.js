@@ -154,10 +154,25 @@ describe('Round', function() {
     round.returnCurrentCard()
     round.takeTurn('spleen')
     round.calculatePercentageCorrect()
-    
+
     round.endRound()
 
     expect(round.endRound()).to.equal('Round over! you answered 50% of the questions correctly!')
+  })
 
+  it('should start timer at 0 mintes and 0 seconds', function() {
+    round = new Round(deck)
+
+    expect(round.seconds).to.equal(0)
+    expect(round.minutes).to.equal(0)
+  })
+
+  it('should start the timer', function() {
+    round = new Round(deck)
+
+    round.timer()
+
+    expect(round.seconds).to.equal(1)
+    expect(round.minutes).to.equal(0)
   })
 })
