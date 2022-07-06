@@ -1,7 +1,5 @@
 const Turn = require('../src/Turn')
 
-let interval;
-
 class Round {
   constructor(deck) {
     this.deck = deck

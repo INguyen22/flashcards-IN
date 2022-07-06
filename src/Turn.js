@@ -1,14 +1,13 @@
-const Card = require('./card')
 class Turn {
   constructor(guess, card) {
     this.guess = guess
     this.card = card
   }
   returnGuess() {
-    this.guess
+    return this.guess
   }
   returnCard() {
-    this.card
+    return this.card
   }
   evaluateGuess() {
     if (this.guess === this.card.correctAnswer) {
