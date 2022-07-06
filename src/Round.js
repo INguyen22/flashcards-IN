@@ -8,7 +8,7 @@ class Round {
     this.incorrectGuesses = []
     this.seconds = 0
     this.minutes = 0
-    setInterval(this.timer.bind(this), 1000)
+    this.interval = setInterval(this.timer.bind(this), 1000)
   }
   returnCurrentCard() {
     this.currentCard = this.deck.currentDeck[this.turns]
@@ -19,7 +19,6 @@ class Round {
     this.turns++
     if (!turn.evaluateGuess()) {
       this.incorrectGuesses.push(this.currentCard.id)
-      return turn.giveFeedback()
     }
     return turn.giveFeedback()
   }
@@ -35,7 +34,8 @@ class Round {
     }
   }
   endRound() {
-    console.log(`Round over! you answered ${this.calculatePercentageCorrect()}% of the questions correctly!`)
+    clearInterval(this.interval)
+    console.log(`Round over! you answered ${this.calculatePercentageCorrect().toFixed(2)}% of the questions correctly!`)
     console.log(`it took you ${this.minutes} minutes and ${this.seconds} seconds`)
     return `Round over! you answered ${this.calculatePercentageCorrect()}% of the questions correctly!`
   }
