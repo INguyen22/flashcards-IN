@@ -35,7 +35,7 @@ class Round {
   }
   endRound() {
     clearInterval(this.interval)
-    console.log(`Round over! you answered ${this.calculatePercentageCorrect().toFixed(2)}% of the questions correctly!`)
+    console.log(`Round over! you answered ${this.calculatePercentageCorrect().toFixed(0)}% of the questions correctly!`)
     console.log(`it took you ${this.minutes} minutes and ${this.seconds} seconds`)
     return `Round over! you answered ${this.calculatePercentageCorrect()}% of the questions correctly!`
   }
