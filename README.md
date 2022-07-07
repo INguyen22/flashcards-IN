@@ -18,7 +18,11 @@ Start the game by running node index.js
 - Hit the `Enter` key to submit your answer. 
 - The game will tell you whether you were correct or not.
 - Hit the `Enter` key again to move on to the next question
-- When the round ends, the game will let the user know their score and how long they took to play. The game will automatically and and you will be returned to the command line. 
+- When the round ends, the game will let the user know their score and how long they took to play.
+
+![game end](./assets/Screen%20Shot%202022-07-06%20at%205.05.01%20PM.png)
+
+- The game will automatically and and you will be returned to the command line. 
 - To exit the game at any point use `Ctrl + c`
 
 ## Technologies Used
